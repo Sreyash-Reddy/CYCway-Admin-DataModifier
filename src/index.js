@@ -1,17 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Dash from './Dash';
+import Error from './Error';
+import Dataentry from './Dataentry';
+import AddCredits from './AddCredits';
+import UpdateValue from './updateValue';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/363337393633373736313739323037373635363236393734363532303732363536343639373236353633373436353634323037343666323036343631373336383632366636313732363432633230363936363230373436383639373332303631363436343732363537333733323036393733323036363666373536653634323036663735373432303734363836353665323036393734373332303631323036333666366437303732366636643639373336353230336132393362" element={<Dash />} />
+        <Route path="/36333732363536313734363534313465363537373431363336333666373536653734" element={<Dataentry />} />
+        <Route path="/373537303634363137343635343436313734363134353665373437323739" element={<UpdateValue />} />
+        <Route path="/37353730363436313734363534333732363536343639373437333439366536363666" element={<AddCredits />} />
+        <Route path="/error" element={<Error />} />
+        <Route path="*" element={<Navigate replace to="/error" />} />
+      </Routes>
+    </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
