@@ -78,7 +78,9 @@ const AddCredits = () => {
     }
 
   const redirectedPage = ()=>{
-    setid3(id0);
+    let stringData = id0.replaceAll(".","");
+    stringData = stringData.replaceAll("'","");
+    setid3(stringData);
     setflag2(1);
     if(flag2===1){
       fun1(credit);

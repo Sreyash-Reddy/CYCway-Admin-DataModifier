@@ -30,11 +30,14 @@ const Dataentry = () => {
 
   const redirectedPage = ()=>{
     // console.log(id1,id2,id3);
-    let finalURL="users/"+id0;
+    // const regex = '[^\w\s]+';
+    let stringData = id0.replaceAll(".","");
+    stringData = stringData.replaceAll("'","");
+    let finalURL="users/"+stringData;
     set(ref(db , finalURL),{
         credit:0,
         idnum:id1,
-        name:id0,
+        name:stringData,
         email:id2,
         phnum:id3
       });

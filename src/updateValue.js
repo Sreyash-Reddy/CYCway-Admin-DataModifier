@@ -63,7 +63,9 @@ const UpdateValue = () => {
       }
 
   const redirectedPage = ()=>{
-    setid10(id0);
+    let stringData = id0.replaceAll(".","");
+    stringData = stringData.replaceAll("'","");
+    setid10(stringData);
     setflag2(1);
     if(flag2===1){
         let data2 = flag+1;
@@ -115,7 +117,7 @@ const UpdateValue = () => {
               <h2>Enter student ID number: </h2>
               <input type="text" placeholder="Enter student ID number" value={id1} onChange={handleToDoChange1}></input>
               <h2>Enter student email: </h2>
-              <input type="text" placeholder="Enter student email ID" value={id2} onChange={handleToDoChange2}></input>
+              <input type="email" placeholder="Enter student email ID" value={id2} onChange={handleToDoChange2}></input>
               <h2>Enter student phone number:</h2>
               <input type="text" placeholder="Enter student phone number" value={id3} onChange={handleToDoChange3}></input>
               <p><i>Double press  after the data is fetched from database completely</i></p>
