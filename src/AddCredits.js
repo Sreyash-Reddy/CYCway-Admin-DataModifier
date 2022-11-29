@@ -8,6 +8,8 @@ const AddCredits = () => {
   let [id0, setid0] = useState("");
   let [id1, setid1] = useState("");
   let [id2, setid2] = useState("");
+  let [id3, setid3] = useState("");
+  let [id4, setid4] = useState("");
   let [credit, setCredit] = useState();
   let fdrt = document.getElementById("finaldatadisplay");
   let fdrt2 = document.getElementById("finaldatadisplay2");
@@ -28,6 +30,10 @@ const AddCredits = () => {
           fdrt.classList.remove('finalData')
           fdrt.classList.add('finalData1');
         }, 4000);
+
+      setid0("");
+      setid1("");
+      setid2("");
     // console.log(fData);
   }
 
@@ -56,12 +62,14 @@ const AddCredits = () => {
 
   const handleToDoChange0 = (e) => {
     setid0(e.target.value);
+    setid3(e.target.value);
   }
   const handleToDoChange1 = (e) => {
     setid1(e.target.value);
   }
   const handleToDoChange2 = (e) => {
     setid2(e.target.value);
+    setid4(e.target.value);
   }
 
   function handleSubmit() {
@@ -73,7 +81,7 @@ const AddCredits = () => {
     <div className="dummyMainDiv">
       <div className="opacdiv1"></div>
       <div className="opacdiv2"></div>
-      <div className="finalData1" id="finaldatadisplay"> {id2} Credits added to {id0}
+      <div className="finalData1" id="finaldatadisplay"> {id4} Credits added to {id3}
         <div className="underlinediv"></div></div>
       <div className="finalData2" id="finaldatadisplay2"> Error No Username found
         <div className="underlinediv"></div></div>
