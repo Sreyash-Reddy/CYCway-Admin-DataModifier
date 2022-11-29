@@ -15,6 +15,12 @@ function Dash() {
     let redirectedPage3 = ()=>{
         navigate("/37353730363436313734363534333732363536343639373437333439366536363666");
     }
+    let redirectedPage4 = ()=>{
+        navigate("/3735373036343631373436353230363337323635363436393734323037343666363436313739");
+    }
+    let redirectedPage5 = ()=>{
+        navigate("/newCycle");
+    }
     return(
         <>
             <div className="dummyMainDiv">
@@ -33,6 +39,12 @@ function Dash() {
                 </div>
                 <div className="link link3" onClick={redirectedPage3}>
                     <h1>Add Credits</h1>
+                </div>
+                <div className="link link4" onClick={redirectedPage4}>
+                    <h1>Update Ride Credits</h1>
+                </div>
+                <div className="link link5" onClick={redirectedPage5}>
+                    <h1>Add Cycle</h1>
                 </div>
                 </div>
                 </div>
