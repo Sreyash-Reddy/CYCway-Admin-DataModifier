@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const CycleAdder = () => {
     // console.log(locData.locData);
-    let [id0,setid0] = useState("");
+    let [id0,setid0] = useState("ScienceBlock");
     let [flag,setflag] = useState(0);
     let [flag2,setflag2] = useState(0);
     let [id1,setid1] = useState("");
